@@ -21,7 +21,7 @@ router.post("/AddSchoolInfo", async (req, res) => {
     await newSchool.save();
     res.status(201).json({ success: true, message: "School added successfully", data: newSchool });
   } catch (error) {
-    res.status(500).json({ success: false, message: "Internal server error", error: error.message });
+    res.status(500).json({ success: false, message: "Internal index error", error: error.message });
   }
 });
 
@@ -60,7 +60,7 @@ router.get("/GetSchoolInfo", async (req, res) => {
     });
   } catch (error) {
     console.log("Error:", error.message); // Debugging log
-    res.status(500).json({ success: false, message: "Internal server error", error: error.message });
+    res.status(500).json({ success: false, message: "Internal index error", error: error.message });
   }
 });
 

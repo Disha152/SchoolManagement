@@ -29,7 +29,7 @@ router.get("/LoginWithSchoolId", async (req, res) => {
       message: "Login successful",
     });
   } catch (error) {
-    res.status(500).json({ message: "Internal server error", error: error.message });
+    res.status(500).json({ message: "Internal index error", error: error.message });
   }
 });
 
