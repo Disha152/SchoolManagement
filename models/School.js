@@ -1,24 +1,4 @@
-// const mongoose = require("mongoose");
 
-// const SessionSchema = new mongoose.Schema({
-//   id: Number,
-//   name: String,
-//   start: String,
-//   enddate: String,
-//   isactive: Boolean,
-// });
-
-// const SchoolSchema = new mongoose.Schema({
-//   schoolid: { type: Number, unique: true, required: true },
-//   strSchoolCode: { type: String, unique: true, required: true },
-//   schoolname: { type: String, required: true },
-//   applogopath: String,
-//   appbannerpath: String,
-//   paymentlink: String,
-//   sessions: [SessionSchema], // Storing session details as an array
-// });
-
-// module.exports = mongoose.model("School", SchoolSchema);
 const mongoose = require("mongoose");
 
 const sessionSchema = new mongoose.Schema({

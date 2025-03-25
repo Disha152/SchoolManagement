@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const schoolRoutes = require("./routes/schoolRoutes");
 const userRoutes = require("./routes/userRoutes");
+const schoolCodeRoutes  = require("./routes/schoolCodeRoutes");
 
 dotenv.config();
 const app = express();
@@ -22,7 +23,8 @@ app.get("/", (req, res) => {
   
 
 // Routes
-app.use("/api/schools", schoolRoutes);
+app.use("/api",schoolCodeRoutes);
+app.use("/api/schoolinfo", schoolRoutes);
 app.use("/api/users", userRoutes);
 
 const PORT = process.env.PORT || 5000;
